@@ -13,7 +13,7 @@
     <div class="hero-body">
       <div class="container">
         <div class="columns is-centered">
-          <div class="column is-5-tablet is-4-desktop is-3-widescreen">
+          <div class="column is-8-tablet is-8-desktop is-8-widescreen">
             <form action="" method="post" class="box">
               {{if .error}}
               <article class="message is-danger">
@@ -22,6 +22,16 @@
                 </div>
                 <div class="message-body">
                   {{.error}}
+                </div>
+              </article>
+              {{end}}
+              {{if .query}}
+              <article class="message is-warning">
+                <div class="message-header">
+                  <p>Query</p>
+                </div>
+                <div class="message-body">
+                  {{.query}}
                 </div>
               </article>
               {{end}}

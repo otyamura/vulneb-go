@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <title>TLDR</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <script src="https://kit.fontawesome.com/925a328521.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <section class="hero is-primary is-fullheight">
+    <div class="hero-body">
+      <div class="container">
+        <div class="columns is-centered">
+          <div class="column is-4-mobile is-8-tablet is-8-desktop is-8-widescreen">
+            <form action="" method="post" class="box">
+              <div class="field">
+                <label for="" class="label">Check Command Usage</label>
+                <div class="control">
+                  <input type="text" placeholder="ssh" class="input" name="name" required>
+                </div>
+              </div>
+              <div class="field">
+                <button type="submit" class="button is-success">
+                  Check
+                </button>
+              </div>
+            </form>
+            {{if .command}}
+              <div class="box is-left content">
+                <p>
+                  $ {{.command}}
+                </p>
+              </div>
+            {{end}}
+            {{if .result}}
+              <div class="box content">
+                <pre>
+                  {{.result}}
+                </pre>
+              </div>
+            {{end}}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</body>
+
+</html>
